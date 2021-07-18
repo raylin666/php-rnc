@@ -1,0 +1,33 @@
+#!/usr/bin/env php
+
+<?php
+// +----------------------------------------------------------------------
+// | Created by linshan. 版权所有 @
+// +----------------------------------------------------------------------
+// | Copyright (c) 2021 All rights reserved.
+// +----------------------------------------------------------------------
+// | Technology changes the world . Accumulation makes people grow .
+// +----------------------------------------------------------------------
+// | Author: kaka梦很美 <1099013371@qq.com>
+// +----------------------------------------------------------------------
+
+ini_set('display_errors', 'on');
+ini_set('display_startup_errors', 'on');
+
+$path = dirname(__DIR__);
+
+require_once sprintf('%s/bootstrap.php', $path);
+
+use Raylin666\Framework\Application;
+
+(function() use ($path) {
+    $application = new Application($path);
+    // 设置配置参数项 (必须写在 __invoke 前, 否则配置项已被初始化了)
+    $application->withConfigOptions($path);
+    // 初始化应用配置
+    $application();
+    // 启动应用
+    return $application->run();
+})();
+
+

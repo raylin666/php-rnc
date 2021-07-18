@@ -1,0 +1,46 @@
+{
+  "name": "raylin666/rnc",
+  "type": "library",
+  "description": "基于 Swoole 扩展开发的一套高性能网络通信框架",
+  "keywords" : [
+    "php",
+    "swoole",
+    "async",
+    "psr",
+    "coroutine",
+    "api",
+    "framework",
+    "rnc",
+    "tcp"
+  ],
+  "license" : "Apache-2.0",
+  "authors": [
+    {
+      "name": "raylin666",
+      "email": "1099013371@qq.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "ext-swoole": ">=4.4.5",
+    "raylin666/framework": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    },
+    "files": []
+  },
+  "autoload-dev": {
+    "psr-4": {}
+  },
+  "extra": {},
+  "packages": {},
+  "packages-dev": {},
+  "repositories": [
+    {
+      "type": "path",
+      "url": "/Users/linshan/Web/www/me.composer/framework"
+    }
+  ]
+}
