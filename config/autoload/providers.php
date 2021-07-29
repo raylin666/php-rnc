@@ -15,6 +15,7 @@ use Raylin666\Framework\ServiceProvider\ServerServiceProvider;
 use Raylin666\Framework\ServiceProvider\ConsoleServiceProvider;
 use Raylin666\Framework\ServiceProvider\EventListenerServiceProvider;
 use Raylin666\Framework\ServiceProvider\ValidatorServiceProvider;
+use Raylin666\Framework\ServiceProvider\DatabaseServiceProvider;
 
 return [
     ConsoleServiceProvider::class,
@@ -23,4 +24,5 @@ return [
     LoggerServiceProvider::class,
     EventListenerServiceProvider::class,
     ValidatorServiceProvider::class,
+    DatabaseServiceProvider::class,
 ];

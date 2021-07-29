@@ -34,4 +34,9 @@ return [
      * 错误级别
      */
     'error_reporting' => E_ALL,
+
+    /**
+     * .yml 配置文件
+     */
+    'yml_config_file' => app()->path() . '/.env.yml',
 ];

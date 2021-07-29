@@ -9,9 +9,10 @@
 // | Author: kaka梦很美 <1099013371@qq.com>
 // +----------------------------------------------------------------------
 
+use Raylin666\Framework\Swoole\Events\OnRequest;
+use Raylin666\Framework\Swoole\Events\OnWorkerStart;
 use Raylin666\Server\SwooleEvent;
 use Raylin666\Server\Contract\ServerInterface;
-use App\EventCallback\OnRequest;
 
 return [
     'mode' => SWOOLE_PROCESS,
@@ -59,5 +60,7 @@ return [
         'buffer_output_size' => 2 * 1024 * 1024,
         'daemonize' => false,
     ],
-    'callbacks' => [],
+    'callbacks' => [
+        SwooleEvent::ON_WORKER_START => OnWorkerStart::class
+    ],
 ];
